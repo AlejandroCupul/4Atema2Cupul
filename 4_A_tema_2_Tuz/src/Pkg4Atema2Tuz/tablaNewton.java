@@ -6,19 +6,23 @@
 package Pkg4Atema2Tuz;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
-
-public class tablaAproximacion extends AbstractTableModel{
-    public String[] columnas={
-        "i", "Xi", "Gxi", "Error" };
+/**
+ *
+ * @author Alejandro Cupul
+ */
+public class tablaNewton extends AbstractTableModel{
     
-    public Class [] tipos ={
-        Integer.class, Double.class, Double.class, Double.class, Double.class
-       
+    public String[] columnas={
+        "i", "xi", "F(xi)", "F'(xi)", "xi+1", "Error"
     };
     
-    private ArrayList<filaAproximaciones> filas;
+    public Class [] tipos ={
+        Integer.class, Double.class, Double.class, Double.class, Double.class, Double.class
+    };
     
-    public tablaAproximacion(ArrayList<filaAproximaciones> filas){
+    private ArrayList<filaNewton> filas;
+    
+    public tablaNewton(ArrayList<filaNewton> filas){
         this.filas = filas;
     }
     
@@ -34,12 +38,14 @@ public class tablaAproximacion extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int i, int i1) {
-        filaAproximaciones fila = this.filas.get(i);
+        filaNewton fila = this.filas.get(i);
         switch(i1){
             case 0: return fila.getI();
             case 1: return fila.getXi();
-            case 2: return fila.getGxi();
-            case 3: return fila.getError();
+            case 2: return fila.getFxi();
+            case 3: return fila.getFdxi();
+            case 4: return fila.getXi1();
+            case 5: return fila.getError();
         }
         return null;
     }
@@ -58,4 +64,5 @@ public class tablaAproximacion extends AbstractTableModel{
     public String getColumnName(int i) {
        return this.columnas[i];
     }
+    
 }

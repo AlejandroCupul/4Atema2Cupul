@@ -112,6 +112,9 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void SecanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SecanteActionPerformed
         // TODO add your handling code here: 
+       dnjSecante dlg = new dnjSecante(this, true);
+       dlg.setSize(600,400);
+       dlg.setVisible(true);
     }//GEN-LAST:event_SecanteActionPerformed
 
     /**

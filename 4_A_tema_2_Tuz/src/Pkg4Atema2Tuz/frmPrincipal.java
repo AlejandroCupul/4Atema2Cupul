@@ -105,7 +105,9 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void NewtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewtonActionPerformed
         // TODO add your handling code here:
-      
+      dnjNewton dlg = new dnjNewton(this, true);
+       dlg.setSize(600,400);
+       dlg.setVisible(true);
     }//GEN-LAST:event_NewtonActionPerformed
 
     private void SecanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SecanteActionPerformed

@@ -98,14 +98,14 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void AproximacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AproximacionActionPerformed
         // TODO add your handling code here:    
-       
+        dnjAproximacion dlg = new dnjAproximacion(this, true);
+       dlg.setSize(600,400);
+       dlg.setVisible(true);
     }//GEN-LAST:event_AproximacionActionPerformed
 
     private void NewtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewtonActionPerformed
         // TODO add your handling code here:
-       dnjNewton dlg = new dnjNewton(this, true);
-       dlg.setSize(600,400);
-       dlg.setVisible(true);
+      
     }//GEN-LAST:event_NewtonActionPerformed
 
     private void SecanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SecanteActionPerformed

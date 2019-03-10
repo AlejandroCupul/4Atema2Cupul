@@ -6,23 +6,19 @@
 package Pkg4Atema2Tuz;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
-/**
- *
- * @author Alejandro Cupul
- */
-public class tablaNewton extends AbstractTableModel{
-    
+
+public class tablaAproximacion extends AbstractTableModel{
     public String[] columnas={
-        "i", "xi", "F(xi)", "F'(xi)", "xi+1", "Error"
-    };
+        "i", "Xi", "Gxi", "Error" };
     
     public Class [] tipos ={
-        Integer.class, Double.class, Double.class, Double.class, Double.class, Double.class
+        Integer.class, Double.class, Double.class, Double.class, Double.class
+       
     };
     
-    private ArrayList<filaNewton> filas;
+    private ArrayList<filaAproximaciones> filas;
     
-    public tablaNewton(ArrayList<filaNewton> filas){
+    public tablaAproximacion(ArrayList<filaAproximaciones> filas){
         this.filas = filas;
     }
     
@@ -38,14 +34,12 @@ public class tablaNewton extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int i, int i1) {
-        filaNewton fila = this.filas.get(i);
+        filaAproximaciones fila = this.filas.get(i);
         switch(i1){
             case 0: return fila.getI();
             case 1: return fila.getXi();
-            case 2: return fila.getFxi();
-            case 3: return fila.getFdxi();
-            case 4: return fila.getXi1();
-            case 5: return fila.getError();
+            case 2: return fila.getGxi();
+            case 3: return fila.getError();
         }
         return null;
     }
@@ -64,5 +58,4 @@ public class tablaNewton extends AbstractTableModel{
     public String getColumnName(int i) {
        return this.columnas[i];
     }
-    
 }

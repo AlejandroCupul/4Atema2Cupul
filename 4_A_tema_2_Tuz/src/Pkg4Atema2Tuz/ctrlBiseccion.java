@@ -30,6 +30,8 @@ public class ctrlBiseccion {
     * @param x los intervalos
     * @return la evaluacion.
     */
+   
+   
    public double getEvaluacion(double x){
        //return Math.pow(x, 2) - .9 * Math.pow(x,1)-1.52;
        //return Math.tan(x)-3.5;
